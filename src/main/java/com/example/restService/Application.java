@@ -1,13 +1,13 @@
-package com.example.restService.myfirstSpringBoot;
+package com.example.restService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MyfirstSpringBootApplication {
+public class Application  {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MyfirstSpringBootApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }

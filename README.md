@@ -13,3 +13,4 @@ Path to JAR
 * https://start.spring.io/ get bootstarp application
 * Download zip and extract it
 * Import in Intellij
+* Edit Configurations to run via Maven. Put into Command Line: spring-boot:run
