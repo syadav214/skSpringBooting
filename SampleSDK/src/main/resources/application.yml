@@ -1,0 +1,5 @@
+PublishedProductApiUrl:
+  Dev: http://localhost:3000/product/published
+
+ShopDefinitionApiUrl:
+  Dev: http://localhost:3000/shop-definition
