@@ -1,10 +1,10 @@
-package com.santosh.springWithAWS;
+package com.pairlearning.expensestracker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringWithAwsApplicationTests {
+class ExpensesTrackerApiApplicationTests {
 
 	@Test
 	void contextLoads() {
