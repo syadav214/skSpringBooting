@@ -45,7 +45,15 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User findByEmailAndPassword(String email, String password) throws EtAuthException {
-        return null;
+        try {
+            User user = jdbcTemplate.queryForObject(SQL_FIND_BY_EMAIL, new Object[]{email}, userRowMapper);
+            if(!password.equals(user.getPassword())) {
+                throw new EtAuthException("Invalid Email/Password");
+            }
+            return  user;
+        }catch (Exception e) {
+            throw new EtAuthException("Invalid Email/Password");
+        }
     }
 
     @Override
@@ -56,7 +64,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     @Override
     public User findById(Integer userId) {
-        return jdbcTemplate.queryForObject(SQL_COUNT_BY_EMAIL, new Object[]{userId}, userRowMapper);
+        return jdbcTemplate.queryForObject(SQL_FIND_BY_ID, new Object[]{userId}, userRowMapper);
     }
 
     private RowMapper<User> userRowMapper = ((rs,rowNum) -> {
