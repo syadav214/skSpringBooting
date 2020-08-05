@@ -52,7 +52,7 @@ public class UserResource {
         String token = Jwts.builder().signWith(SignatureAlgorithm.HS256, Constants.API_SECRET_KEY)
                 .setIssuedAt(new Date(timestamps))
                 .setExpiration(new Date(timestamps + Constants.TOKEN_VALIDITY))
-                .claim("userid", user.getUserId())
+                .claim("userId", user.getUserId())
                 .claim("email", user.getEmail())
                 .claim("firstName", user.getFirstName())
                 .claim("lastName", user.getLastName())
